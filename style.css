@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #2b1055, #000);
+    color: white;
+    overflow: hidden;
+}
+.background {
+    position: fixed;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+    opacity: 0.25;
+}
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.subtitle {
+    color: #c9b6ff;
+    margin-bottom: 25px;
+}
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(138,43,226,0.4);
+}
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #8a2be2, #5f2cff);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #8a2be2;
+}
+.predict {
+    margin-top: 15px;
+}
+.preview img {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+    display: none;
+}
+.result {
+    animation: fadeUp 0.6s ease;
+}
+.hidden {
+    display: none;
+}
+.confidence-ring {
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #8a2be2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
