@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Skin Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1 class="title">AI Skin Cancer Detection</h1>
+        <p class="subtitle">Hybrid CNN + EfficientNet Diagnostic System</p>
+        <!-- Upload Card -->
+        <div class="card">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <button class="btn" onclick="document.getElementById('imageInput').click()">
+                Upload Image
+            </button>
+            <div class="preview">
+                <img id="previewImage" />
+            </div>
+            <button class="btn predict" onclick="predictImage()">Predict</button>
+        </div>
+        <!-- Result Card -->
+        <div class="card result hidden" id="resultCard">
+            <h2 id="resultLabel">—</h2>
+            <div class="confidence-ring">
+                <span id="confidenceValue">0%</span>
+            </div>
+        </div>
+        <!-- Disclaimer -->
+        <p class="disclaimer">
+            ⚠️ This system is AI-assisted and not a medical diagnosis.
+        </p>
+    </div>
+</body>
+</html>
